@@ -4,7 +4,7 @@
   - [Hệ quản trị CSDL là gì:](#hệ-quản-trị-csdl-là-gì)
     - [6 Chức năng của DBMS:](#6-chức-năng-của-dbms)
   - [Câu lệnh tạo database, table trong MS SQL Server](#câu-lệnh-tạo-database-table-trong-ms-sql-server)
-  
+  - [Xử lí truy vấn trong SQL:](#xử-lí-truy-vấn-trong-sql)
 ## CSDL là gì:
 - Cơ sở dữ liệu (database) là một tập hợp các dữ liệu rời rạc được tổ chức, lưu trữ và quản lý theo hệ thống để có thể dễ dàng truy xuất, chỉnh sửa và cập nhật. Chúng thường được sử dụng để lưu trữ thông tin trong các hệ thống phần mềm và ứng dụng, từ dữ liệu cá nhân cho đến thông tin doanh nghiệp quan trọng. Cơ sở dữ liệu giúp các tổ chức và cá nhân tổ chức dữ liệu một cách có cấu trúc, nhằm mục đích quản lý và xử lý dữ liệu hiệu quả hơn.
 
@@ -49,3 +49,10 @@
 create database SQLDBQuery
 
 Câu lệnh tạo database
+```
+## Xử lí truy vấn trong SQL:
+Xử lí truy vấn bao gồm việc trích xuất cơ sở dữ liệu qua nhiều bước. Điều này bao gồm việc dịch các truy vấn cấp cao thành cc biểu thức cấp thấp ở cấp độ vật lí của hệ thống tệp, tối ưu hóa các truy vấn và thực thi chúng để có kết quá thực tế.
+- SQL là ngôn ngữ cấp cao không chỉ giúp người dùng dễ dàng truy vấn dữ liệu dựa trên nhu cầu của họ mà còn thu hẹp khoảng cách giao tiếp giữa DBMS, vốn không thực sự hiểu ngôn ngữ của con người. Trên thực tế, Hệ thông DBMS, vốn không thực sự hiểu ngôn ngữ của con người, Trên thực tế , Hệ thống DBMS cơ bản thậm chí sẽ không hiểu các truy vấn SQL này.
+- Để chúng hiểu và thực thi 1 truy vấn, trước tiên chúng cần được chuyển đổi sang Ngôn Ngữ Cấp Thấp. Các truy vấn SQL đi qua một đơn vị xử lí chuyển đổi chúng thành ngôn ngữ cấp thấp thông qua Đại số quan hệ trong DBMS.
+
+![alt text](/Backend-Web/Buoi1/AnhBuoi1/Anh1.png)
