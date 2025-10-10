@@ -237,3 +237,51 @@ Có thể có nhiều khóa trong 1 tập thực thể, ta sẽ chọn ra 1 khó
 
 ##  Chuẩn hóa dữ liệu: 1NF, 2NF, 3NF.
 
+### 1. Chuẩn hóa dữ liệu là gì:
+**Chuẩn hóa dữ liệu** là quá trình biểu diễn cơ sở dữ liệu dưới dạng chuẩn. Đây là một kỹ thuật thiết kế bảng trong cơ sở dữ liệu, chia các bảng lớn thành các bảng nhỏ hơn và liên kết chúng bằng các mối quan hệ. 
+
+Quá trình này diễn ra với mục đích là loại bỏ hoặc làm giảm sự dư thừa và phụ thuộc của dữ liệu.
+
+### 2. Các dạng chuẩn hóa cơ bản
+Có 4 dạng cơ bản là dạng chuẩn: 1NF, 2NF, 3NF và BCNF. Các dạng chuẩn hóađược sắp xếp từ thấp đến cao. Để chuẩn hóa 2NF thì cơ sở dữ liệu của chúng ta phải đạt chuẩn 1NF, tương tự nếu muốn đạt chuẩn 3NF thì phải đạt chuẩn 1 NF và 2 NF. Chuẩn BCNF sẽ bao gồm 3 loại chuẩn là 1NF, 2NF và 3NF.
+#### 2.1 Dạng chuẩn 1NF
+
+Một bảng cơ sở dữ liệu được gọi là ở dạng chuẩn hóa dữ liệu 1NF khi toàn bộ các miền giá trị của các cột trong bảng đều chỉ chứa các giá trị nguyên tử (nguyên tố) và mỗi cột chỉ chứa một giá trị từ miền.
+
+Ví dụ về bảng lưu trữ tên và số điện thoại của khách hàng:
+
+![alt text](./AnhBuoi2/Anh10.png)
+
+Bảng này đang vi phạm 1NF vì cột Telephone Number chứa nhiều giá trị (nhiều số điện thoại) nên các giá trị trong cột không phải là nguyên tố mà có thể được chia thành hai số. 
+
+Chỉnh sửa để đưa về dạng chuẩn 1NF:
+
+![alt text](./AnhBuoi2/Anh11.png)
+
+#### 2.2 Dạng chuẩn 2NF
+Một quan hệ đủ tiêu chí là dạng chuẩn hóa dữ liệu 2NF nếu quan hệ đó:
+
++ Là 1NF
++ Các thuộc tính không khoá phải phụ thuộc hàm đầy đủ vào khoá chính
+**Ví dụ 1**: Cho quan hệ R = (ABCD), khoá chính là AB và tập phụ thuộc hàm là F = {AB => C, AB => D} là quan hệ đạt chuẩn 2NF.
+
+**Ví dụ 2**: Cho quan hệ R = (ABCD), khoá chính là AB và tập phụ thuộc hàm là F = {AB => C, AB => D, B => DC} là quan hệ không đạt chuẩn 2NF vì có B => DC là phụ thuộc hàm không đầy đủ vào khoá chính
+
+#### 2.3 Dạng chuẩn 3NF 
+Một quan hệ đủ tiêu chí là dạng chuẩn hóa dữ liệu 3NF nếu quan hệ đó: 
++ Là 2NF
++ Các thuộc tính không khóa phải phụ thuộc trực tiếp vào khóa chính
+
+**Ví dụ 1**: Cho quan hệ R = (ABCDGH), khoá chính là AB và tập phụ thuộc hàm F = {AB -> C, AB -> D, AB -> GH} là quan hệ đạt chuẩn 3NF.
+
+**Ví dụ 2**: Cho quan hệ R = (ABCDGH) , khoá là AB và tập phụ thuộc hàm F = {AB -> C, AB -> D, AB -> GH, G -> DH}. Đây là quan hệ không đạt chuẩn 3NF vì có G -> DH là phụ thuộc hàm gián tiếp vào khoá
+
+#### 2.4 Dạng chuẩn BCNF (Boyce - Codd)
+Một quan hệ đạt chuẩn BCNF nếu quan hệ đó:
+
++ Là 3NF
++ Không có thuộc tính khoá mà phụ thuộc hàm vào thuộc tính không khoá.
+
+Ví dụ 1: Cho quan hệ R = (ABCDGH), khoá là AB và tập phụ thuộc hàm F = {AB -> C, AB -> D, AB -> GH} là quan hệ đạt chuẩn BCNF.
+
+Ví dụ 2: Cho quan hệ R = (ABCDGH) , khoá là AB và tập phụ thuộc hàm F = {AB -> C, AB -> D, AB -> GH, H -> B}. Đây là quan hệ không đạt chuẩn hóa dữ liệu BCNF vì có thuộc tính khoá B phụ thuộc hàm vào thuộc tính không khoá H
