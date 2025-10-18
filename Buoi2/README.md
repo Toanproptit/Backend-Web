@@ -13,15 +13,20 @@ Và sau đây là một quan hệ trên lược đồ quan hệ thi
 ![alt text](./AnhBuoi2/Anh1.png)
 
 1, Dư thừa(Dự phòng):Họ tên của các thí sinh được lặp lại cho mỗi môn thi.
+
 2, Dự trữ ẩn khi cập nhật. Do dư thừa hậu quả, chúng tôi có thể truy cập nhật tên của một sinh viên trong một bộ nào đó nhưng vẫn để lấy lại tên cũ của họ trong những bộ khác. Vì vậy chúng ta có thể không có tên duy nhất của họ đối với mỗi sinh viên như chúng ta mong muốn.
+
 3, Bất lợi khi chèn. chung ta không thể biết tên của một sinh viên nếu hiện tại sinh viên đó không dự thi môn nào.
+
 4, Bất bình thường khi xóa. Ngược lại với vấn đề 3 có vấn đề chúng ta có thể xóa đi tất cả các môn học của một sinh viên, vô ý làm mất dấu vết để tìm ra họ tên của sinh viên này.
 + Những vấn đề nêu trên sẽ được giải quyết  nếu chúng ta phân rã lược đồ quan hệ Diemthi thành ba lược đồ quan hệ:
     + SinhVien(MASV,HOTEN)
     + MonHoc(MAMH,TENMON)
     + Ketqua(MASV,MAMH,DIEMTHI)
 ![alt text](./AnhBuoi2/Anh2.png)
+
 Ưu điểm: Lược đồ quan hệ SinhVien cho biết họ tên của mỗi sinh viên chỉ xuất hiện đúng một lần; do vậy không có dư thừa. Ngoài ra chúng ra có thể nhập họ tên của một sinh viên dù hiện tại sinh viên đó chưa có kết quả thi môn nào.
+
 Nhược điểm: Tuy nhiên lúc này ta nhận thấy rằng để tìm danh sách họ tên của các sinh viên ứng với môn thi cơ sở dữ liệu thì chúng ta phải thực hiện một phép kết nối, còn với một quan hệ duy nhất thi chúng ta có thể dễ dàng trả lời bằng cách thực hiện một phép chọn rồi phép chiếu.
 => làm sao để đưa được một lược đồ cơ sở dữ liệu chưa tốt về một lược đồ cơ sở dữ liệu tốt hơn?
 ### Phụ thuộc hàm
