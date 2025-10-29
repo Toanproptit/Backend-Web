@@ -109,7 +109,7 @@ from table_name
 ![alt text](./AnhBuoi3/Anh3.png)
 
 Lấy thông tin dựa vào điều kiện:
-
+  
 ```
 SELECT column1,column2,...
 from table_name
