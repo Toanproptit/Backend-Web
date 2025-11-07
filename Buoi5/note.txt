@@ -1,0 +1,7 @@
+- Request : thiếu 3 phần: body header ,..
+- HTTP status: thiếu các loại trả về của HTTP:
+status line: HTTP version 
+Status code
+Reason Phrase:Mô tả trạng thái
+
+

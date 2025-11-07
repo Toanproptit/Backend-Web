@@ -47,6 +47,9 @@ Các đặc trưng của HTTP(features):
 + **TRACE**: Được sử dụng cho mục đích gỡ lỗi để phản hồi yêu cầu đã nhận cho máy khách, mặc dù nó hiếm khi được sử dụng do lo ngại về bảo mật.
 + **CONNECT**: Được sử dụng để thiết lập đường hầm đến cho máy chủ thông qua proxy HTTP , thường được sử dụng cho kết nối SSL/TLS
 ### Response là gì, Request là gì ?
+
+![alt text](./AnhBuoi5/Anh5.png)
+
 HTTP là giao thức yêu cầu-phản hồi , nghĩa là với mỗi yêu cầu được gửi  bởi máy khách , máy chủ sẽ phản hồi bằng một phản hồi tương ứng . Luông cơ bản của một chu trình yêu cầu - phản hồi HTTP như sau:
 
 - **Client sends an HTTP request**: Máy khách (thường là trình duyệt web) khởi tạo quy trình bằng cách gửi yêu cầu HTTP đến máy chủ. Yêu cầu này bao gồm phương thức yêu cầu(GET,POST,PUT,DELETE,...) URL đích, tiêu đề và nội dụng yêu cầu tùy chọn.

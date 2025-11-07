@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Xin chào Đến với Web của NTT</title>
+    </head>
+    <body>
+    <h2 th:text="'Xin chào, ' + ${person.lastName} + '!'"></h2>
+    <h2 th:text="'Xin chào, ' + ${person.firstName} + '!'"></h2>
+    <h2 th:text="'Xin chào, ' + ${person.address} + '!'"></h2>
+    <h2 th:text="'Xin chào, ' + ${person.birthday} + '!'"></h2>
+    <h2 th:text="'Xin chào, ' + ${person.email} + '!'"></h2>
+    </body>
+</html>
