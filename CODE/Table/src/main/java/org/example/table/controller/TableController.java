@@ -10,10 +10,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/tables")
 public class TableController {
+
     private final TableService tableService;
     public TableController(TableService tableService) {
         this.tableService = tableService;
     }
+
     @GetMapping
     public List<TableEntity> findAll(){
         return tableService.findAll();
@@ -22,6 +24,7 @@ public class TableController {
     public TableEntity getById(@PathVariable Long id){
         return tableService.findById(id);
     }
+
     @PostMapping
     public Long save(@RequestBody TableEntity tableEntity){
         return tableService.create(tableEntity);

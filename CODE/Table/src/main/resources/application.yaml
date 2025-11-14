@@ -2,9 +2,10 @@ spring:
   application:
     name: Spring_boot_shop
   datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/Test_Table
     username: root
-    password: 27102005Az
+    password:
   jpa:
     hibernate:
       ddl-auto: update

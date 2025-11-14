@@ -9,6 +9,7 @@ import java.util.List;
 
 @Service
 public class TableService {
+
     private final RepositoryTable repositoryTable;
     public TableService(RepositoryTable repositoryTable) {
         this.repositoryTable = repositoryTable;
