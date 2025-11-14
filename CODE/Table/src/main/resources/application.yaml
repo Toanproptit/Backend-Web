@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: Spring_boot_shop
+  datasource:
+    url: jdbc:mysql://localhost:3306/Test_Table
+    username: root
+    password: 27102005Az
+  jpa:
+    hibernate:
+      ddl-auto: update

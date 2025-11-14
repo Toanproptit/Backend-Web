@@ -1,5 +1,7 @@
 package com.example.demo.Model;
 
+
+
 public class Personal {
     private String lastName,firstName;
     private String address,birthday,email;
